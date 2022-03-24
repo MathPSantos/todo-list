@@ -6,7 +6,7 @@ interface TodoItemProps {
   todo: Todo;
   onRemove: (id: string) => void;
   onToggle: (id: string) => void;
-  onSelected: (id: string) => void;
+  onSelected: (todo: Todo) => void;
 }
 
 export function TodoItem({
@@ -29,7 +29,7 @@ export function TodoItem({
     >
       <Checkbox
         isChecked={todo.isSelected}
-        onChange={() => onSelected(todo.id)}
+        onChange={() => onSelected(todo)}
         color={todo.isCompleted ? "white" : "gray.500"}
         fontWeight={todo.isCompleted ? "medium" : "regular"}
       >
