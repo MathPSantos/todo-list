@@ -196,7 +196,7 @@ export function App() {
   return (
     <Box px={16} py={16}>
       <Box maxW={520} mx="auto">
-        <Heading>Todo List</Heading>
+        <Heading>Taskks</Heading>
 
         <Stack
           as="form"
